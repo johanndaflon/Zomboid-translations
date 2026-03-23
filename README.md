@@ -41,7 +41,7 @@ python Zomboid_txt_to_json.py <folder_path>
 ## Script 2: JSON Synchronization
 
 ### Purpose
-Ensures all translation files match the English (`EN`) structure.
+Ensures all translation files match the English (`EN`) structure. It will help to modders and translators to quickly translate the mods.
 
 ### Usage
 ```bash
