@@ -61,3 +61,5 @@ python Zomboid_sync_translation_files.py <root_folder>
 ## Notes
 - This script overwrites files
 - Keep backups before running
+
+THIS IS A FREE SOFTWARE, YOU CAN MODIFY IT, YOU CAN REPUBLISH AS YOUR OWN.
