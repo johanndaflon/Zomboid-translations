@@ -27,7 +27,7 @@ Converts `.txt` files into `.json` format.
 
 ### Features
 - Detects encoding automatically
-- Removes prefixes like `ItemName_` and `Recipe_`
+- Removes prefixes like `ItemName_` and `Recipe_`(Other prefixes are kept, because it is the files strutures in Build 42.15)
 - Cleans filenames
 - Processes folders recursively
 
