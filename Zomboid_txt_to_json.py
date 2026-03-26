@@ -1,19 +1,25 @@
 import json
 import re
 from pathlib import Path
+from charset_normalizer import from_path
 
 
 def read_file_safely(file_path):
-    encodings = ["utf-8", "latin-1", "cp1252"]
+    """
+    Detecta encoding automaticamente (melhor abordagem possível)
+    """
 
-    for enc in encodings:
-        try:
-            with open(file_path, "r", encoding=enc) as f:
-                return f.read()
-        except UnicodeDecodeError:
-            continue
+    result = from_path(file_path).best()
 
-    raise Exception(f"Erro ao ler {file_path}")
+    if result is None:
+        raise Exception(f"[ERRO] Não foi possível detectar encoding: {file_path}")
+
+    content = str(result)
+    encoding = result.encoding
+
+    print(f"[OK] {file_path} | encoding detectado: {encoding}")
+
+    return content
 
 
 def clean_filename(name):
